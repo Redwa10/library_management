@@ -61,5 +61,5 @@ class Reservation(models.Model):
     ]
     member = models.foreignkey(Member, on_delete = models.CASCADE)
     book = models.OneToOneField(Books, on_delete= models.CASCADE)
-    reservation_date = models.DateField(auto_now_add= True)
+    reservation_date = models.DateField(auto_now= True)
     rstatus = models.CharField(max_length= 1, choices = reservation_status)
