@@ -25,7 +25,7 @@ class Books(models.Model):
 
     title = models.CharField(max_length = 255)
     genre = models.CharField(max_length = 255)
-    author = models.foreignkey(Author, on_delete = models.CASCADE)
+    author = models.foreignkey(Author, on_delete = models.CASCADE, related_name= "author")
     Bstatus = models.CharField(max_length = 1, choice = book_status, default = available)
 
 class Member(models.Model):
