@@ -59,7 +59,7 @@ class Reservation(models.Model):
         (completed, 'completed')
         (canceled, 'canceled')
     ]
-    member = models.foreignkey(Member, on_delete = models.CASCADE)
+    member = models.foreignkey(Member, on_delete = models.CASCADE, related_name= "member")
     book = models.OneToOneField(Books, on_delete= models.CASCADE)
     reservation_date = models.DateField(auto_now= True)
     rstatus = models.CharField(max_length= 1, choices = reservation_status)
