@@ -7,6 +7,7 @@ class Library(models.Model):
     contact = models.CharField(max_length = 255)
 
 
+
 class Author(models.Model):
     name = models.CharField(max_length = 255)
     address = models.CharField(max_length = 255)
